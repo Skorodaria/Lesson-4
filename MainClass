@@ -1,0 +1,36 @@
+package Lesson4;
+
+public class MainClass {
+    public static void main(String[] args){
+        System.out.println("список контактов");
+        Phonebook phonebook = new Phonebook();
+        System.out.println("-----------------");
+
+        System.out.println("Добавляем в справочник");
+        phonebook.add("Liza", "8 7564 98 65");
+        phonebook.add("Marina", "8 809 54 34");
+        phonebook.add("Viktor", "8 609 65 43");
+        phonebook.add("Lika", "8 098 567 43");
+        phonebook.add("Vera", "8 54 21 23 46");
+        System.out.println("-----------------");
+
+        System.out.println("номера");
+        System.out.println("Liza");
+        System.out.println(phonebook.get("Liza"));
+        System.out.println("Marina");
+        System.out.println(phonebook.get("Marina"));
+        System.out.println("Viktor");
+        System.out.println(phonebook.get("Viktor"));
+        System.out.println("-----------------");
+
+        System.out.println("Случай отсутствия контакта");
+        System.out.println("Veronika");
+        System.out.println(phonebook.get("Veronika"));
+        System.out.println("-----------------");
+
+        System.out.println("записать существующий номер");
+        phonebook.add("Marina", "8 809 54 34");
+        System.out.println("Marina");
+        System.out.println(phonebook.get("Marina"));
+    }
+}
